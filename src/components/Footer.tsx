@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Send, ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { Logo_Dark } from "./Logo";
+// import { motion } from "framer-motion";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
