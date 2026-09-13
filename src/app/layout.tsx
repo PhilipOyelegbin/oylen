@@ -32,6 +32,38 @@ export const metadata: Metadata = {
     "Precision Farming",
     "Telemedicine",
   ],
+  openGraph: {
+    title: "Oylen Group | Scaling Innovation & Sustainable Growth",
+    description:
+      "Oylen Group is a leading global conglomerate driving technology-enabled advancements across Fintech, Real Estate, Agritech, and Healthtech.",
+    url: process.env.NEXT_PUBLIC_HOST_URI,
+    type: "website",
+    locale: "en_US",
+    images: "./opengraph-image.png",
+    siteName: "Oylen Group",
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "./apple-touch-icon.png",
+    shortcut: "/shortcut-icon.png",
+    apple: "./apple-touch-icon.png",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "./apple-touch-icon.png",
+    },
+  },
 };
 
 export default function RootLayout({
