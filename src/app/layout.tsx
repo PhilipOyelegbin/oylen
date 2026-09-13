@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_HOST_URI || "http://localhost:3000",
+  ),
   title: {
     default: "Oylen Group | Scaling Innovation & Sustainable Growth",
     template: "%s | Oylen Group",
@@ -32,6 +35,14 @@ export const metadata: Metadata = {
     "Precision Farming",
     "Telemedicine",
   ],
+  authors: [
+    { name: "Philip Oyelegbin", url: "https://philip.oyelegbin.name.ng" },
+  ],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: "Oylen Group | Scaling Innovation & Sustainable Growth",
     description:
@@ -42,10 +53,17 @@ export const metadata: Metadata = {
     images: "./opengraph-image.png",
     siteName: "Oylen Group",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oylen Group | Scaling Innovation & Sustainable Growth",
+    description:
+      "Oylen Group is a leading global conglomerate driving technology-enabled advancements across Fintech, Real Estate, Agritech, and Healthtech.",
+    images: [`${process.env.NEXT_PUBLIC_HOST_URI}/opengraph-image.png`],
+  },
   robots: {
-    index: false,
+    index: true,
     follow: true,
-    nocache: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: false,
