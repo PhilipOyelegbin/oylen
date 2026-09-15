@@ -1,20 +1,29 @@
 import type { Metadata } from "next";
-import "@fontsource/space-grotesk/500.css";
-import "@fontsource/space-grotesk/600.css";
-import "@fontsource/space-grotesk/700.css";
-import "@fontsource/plus-jakarta-sans/400.css";
-import "@fontsource/plus-jakarta-sans/500.css";
-import "@fontsource/plus-jakarta-sans/600.css";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_HOST_URI || "http://localhost:3000",
   ),
-  title:
-    "OylenGroup — A Group of Trailblazing Ventures for Every Modern Challenge",
+  title: {
+    default: "Oylen Group | Scaling Innovation & Sustainable Growth",
+    template: "%s | Oylen Group",
+  },
   description:
-    "OylenGroup engineers, scales, and operates sovereign-grade platforms spanning resilient cloud infrastructure, scam-free direct PropTech, ultra-fast fintech telecommunications, and high-impact venture incubation.",
+    "Oylen Group is a leading global conglomerate driving technology-enabled advancements across Fintech, Real Estate, Agritech, and Healthtech.",
   keywords: [
     "Oylen Group",
     "Conglomerate",
@@ -77,13 +86,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className="h-full">
-      <body className="min-h-full flex flex-col bg-background text-on-background font-body pb-16 lg:pb-0">
-        {children}
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+    >
+      <body className="min-h-full flex flex-col bg-light-bg text-text-gray font-sans selection:bg-primary/20 selection:text-primary">
+        <Navbar />
+        <main className="grow pt-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );

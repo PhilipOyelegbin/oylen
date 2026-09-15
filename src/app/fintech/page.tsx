@@ -1,7 +1,15 @@
 "use client";
 
-import InvestmentCalc from "@/components/fintech/InvestmentCalc";
-import { Shield, Sparkles, Zap, Smartphone, Landmark, CheckCircle, ArrowRight } from "lucide-react";
+import InvestmentCalc from "@/componentsbk/fintech/InvestmentCalc";
+import {
+  Shield,
+  Sparkles,
+  Zap,
+  Smartphone,
+  Landmark,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -9,22 +17,26 @@ const features = [
   {
     icon: Smartphone,
     title: "Neobanking Infrastructure",
-    description: "Full-suite checking, instant savings, and settlement routing on our proprietary mobile stack.",
+    description:
+      "Full-suite checking, instant savings, and settlement routing on our proprietary mobile stack.",
   },
   {
     icon: Zap,
     title: "Fractional Yields",
-    description: "Invest directly into real estate developments or smart farms starting with as little as $10.",
+    description:
+      "Invest directly into real estate developments or smart farms starting with as little as $10.",
   },
   {
     icon: Landmark,
     title: "Institutional Asset Tokenization",
-    description: "Converting physical warehouses, medical parks, and agriculture outputs into liquid digital assets.",
+    description:
+      "Converting physical warehouses, medical parks, and agriculture outputs into liquid digital assets.",
   },
   {
     icon: Shield,
     title: "Enterprise Grade Custody",
-    description: "Secured by advanced cryptographic hardware, bank-grade licensing, and comprehensive insurance.",
+    description:
+      "Secured by advanced cryptographic hardware, bank-grade licensing, and comprehensive insurance.",
   },
 ];
 
@@ -53,7 +65,10 @@ export default function FintechPage() {
               <span className="text-primary">Multiplying Value</span>
             </h1>
             <p className="text-slate-300 font-light text-base md:text-lg leading-relaxed">
-              We leverage digital ledgers and custom neobank frameworks to connect institutional investments with micro-savings portals. From cross-border settlement to fractional real asset tokenization, Oylen is changing the rate of capital velocity.
+              We leverage digital ledgers and custom neobank frameworks to
+              connect institutional investments with micro-savings portals. From
+              cross-border settlement to fractional real asset tokenization,
+              Oylen is changing the rate of capital velocity.
             </p>
           </div>
 
@@ -68,7 +83,9 @@ export default function FintechPage() {
               <div className="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-accent/20 blur-2xl"></div>
               <div className="flex justify-between items-start">
                 <div>
-                  <p className="text-[10px] uppercase tracking-wider text-slate-300">Corporate Elite</p>
+                  <p className="text-[10px] uppercase tracking-wider text-slate-300">
+                    Corporate Elite
+                  </p>
                   <p className="text-sm font-bold mt-1">Oylen Group</p>
                 </div>
                 <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center border border-white/15">
@@ -77,14 +94,22 @@ export default function FintechPage() {
               </div>
 
               <div className="my-auto pt-6">
-                <p className="text-xs text-slate-400 font-mono tracking-widest">••••  ••••  ••••  8829</p>
-                <p className="text-[10px] text-accent mt-1 tracking-wider uppercase">Institutional Vault Card</p>
+                <p className="text-xs text-slate-400 font-mono tracking-widest">
+                  •••• •••• •••• 8829
+                </p>
+                <p className="text-[10px] text-accent mt-1 tracking-wider uppercase">
+                  Institutional Vault Card
+                </p>
               </div>
 
               <div className="flex justify-between items-end">
                 <div>
-                  <p className="text-[8px] uppercase text-slate-400">Cardholder</p>
-                  <p className="text-xs font-semibold text-slate-200">Oylen Partner Node</p>
+                  <p className="text-[8px] uppercase text-slate-400">
+                    Cardholder
+                  </p>
+                  <p className="text-xs font-semibold text-slate-200">
+                    Oylen Partner Node
+                  </p>
                 </div>
                 <div className="flex space-x-1">
                   <span className="h-5 w-5 rounded-full bg-rose-500/80"></span>
@@ -100,10 +125,15 @@ export default function FintechPage() {
       <section className="py-20 bg-light-bg">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-primary">Live Calculator</span>
-            <h2 className="text-3xl font-bold text-secondary mt-1">See Your Funds Grow</h2>
+            <span className="text-xs uppercase tracking-widest font-extrabold text-primary">
+              Live Calculator
+            </span>
+            <h2 className="text-3xl font-bold text-secondary mt-1">
+              See Your Funds Grow
+            </h2>
             <p className="text-xs text-slate-500 mt-2 font-light">
-              Use our simulator to see how compounding annual interest yields (APY) compare to conventional banking deposits.
+              Use our simulator to see how compounding annual interest yields
+              (APY) compare to conventional banking deposits.
             </p>
           </div>
           <InvestmentCalc />
@@ -114,21 +144,32 @@ export default function FintechPage() {
       <section className="py-20 bg-white border-t border-neutral-gray/50">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-primary">Financial Edge</span>
-            <h2 className="text-3xl font-bold text-secondary mt-1">Modern Platform Capability</h2>
+            <span className="text-xs uppercase tracking-widest font-extrabold text-primary">
+              Financial Edge
+            </span>
+            <h2 className="text-3xl font-bold text-secondary mt-1">
+              Modern Platform Capability
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feat, i) => {
               const Icon = feat.icon;
               return (
-                <div key={feat.title} className="p-6 rounded-2xl bg-light-bg border border-neutral-gray/50 flex space-x-4">
+                <div
+                  key={feat.title}
+                  className="p-6 rounded-2xl bg-light-bg border border-neutral-gray/50 flex space-x-4"
+                >
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-secondary mb-1">{feat.title}</h3>
-                    <p className="text-xs text-slate-500 leading-relaxed font-light">{feat.description}</p>
+                    <h3 className="text-base font-bold text-secondary mb-1">
+                      {feat.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 leading-relaxed font-light">
+                      {feat.description}
+                    </p>
                   </div>
                 </div>
               );
@@ -141,16 +182,25 @@ export default function FintechPage() {
       <section className="py-20 bg-light-bg border-t border-neutral-gray/50">
         <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-primary">Security & Custody</span>
-            <h2 className="text-3xl font-bold text-secondary">A Foundation Built on Absolute Trust</h2>
+            <span className="text-xs uppercase tracking-widest font-extrabold text-primary">
+              Security & Custody
+            </span>
+            <h2 className="text-3xl font-bold text-secondary">
+              A Foundation Built on Absolute Trust
+            </h2>
             <p className="text-sm text-slate-500 leading-relaxed font-light">
-              Compliance and client safety are our absolute priority. We operate strictly in regulated corridors under licensing and insurance schemes that keep institutional and retail deposits fully segregated.
+              Compliance and client safety are our absolute priority. We operate
+              strictly in regulated corridors under licensing and insurance
+              schemes that keep institutional and retail deposits fully
+              segregated.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {highlights.map((hl) => (
                 <div key={hl} className="flex items-start space-x-2">
                   <CheckCircle className="h-4.5 w-4.5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-xs font-medium text-secondary">{hl}</span>
+                  <span className="text-xs font-medium text-secondary">
+                    {hl}
+                  </span>
                 </div>
               ))}
             </div>
@@ -163,9 +213,13 @@ export default function FintechPage() {
                 <Sparkles className="h-4 w-4 text-accent" />
                 <span>Institutional Vault</span>
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-2">Connect Your Institution</h3>
+              <h3 className="text-xl font-bold text-secondary mb-2">
+                Connect Your Institution
+              </h3>
               <p className="text-xs text-slate-500 leading-relaxed font-light mb-6">
-                Receive dedicated API keys, customize lending terms for your nodes, and yield compound interest automatically from Oylen treasuries.
+                Receive dedicated API keys, customize lending terms for your
+                nodes, and yield compound interest automatically from Oylen
+                treasuries.
               </p>
             </div>
             <Link
